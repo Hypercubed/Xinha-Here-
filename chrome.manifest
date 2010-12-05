@@ -1,0 +1,8 @@
+content	xinhahere	chrome/xinhahere/content/ xpcnativewrappers=no
+overlay	chrome://browser/content/browser.xul	chrome://xinhahere/content/xinhahereOverlay.xul
+
+locale	xinhahere	en-US	chrome/xinhahere/locale/en-US/
+locale	xinhahere	ja-JP	chrome/xinhahere/locale/ja-JP/
+
+skin	xinhahere	classic/1.0	chrome/xinhahere/skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://xinhahere/skin/xinhahere-button.css

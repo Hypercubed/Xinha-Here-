@@ -1,0 +1,94 @@
+Version History
+
+Version 0.1
+    * Initial Release
+
+Version 0.2
+    * Incorporated latest Xinha nightly build
+    * Firefox v1.5 compatible
+
+Version 0.3
+    * Fixed bug with popup Xinha features
+    * Xinha nightly build: Nov. 30, 2005
+
+Version 0.4
+    * Restored full compatibility with SpellBound and other context menu extensions
+    * Added options dialog. Change skin and active plugins.
+    * Xinha nightly build: Dec. 11, 2005
+    * Packaged as Firefox 1.5 only
+
+Version 0.5
+    * Restored backwards compatibility with Firefox v1.0.x
+    * Fixed issues with popup window sizes
+    * Now persists data after options change
+
+Version 0.6
+    * Xinha Here is now much better at remembering it's source element when opening multiple windows
+    * Improved  window sizing/resizing
+    * Open Xinha within the browser (Awesome!)
+    * Xinha skins now apply to whole window
+    * Added a Xinha plugin specifically for advanced Xinha functions (adds features like save as file, open file, recall last input).
+    * Added automatic updating (only in FF 1.5)
+    * Fix bug in FX < 1.5 where plugins list doesn't scroll
+	
+Version 0.7
+    * Added Open Xinha Here outside of tree menu for easy access
+    * Now open Xinha Here using Alt-X form any text box
+    * Flocked!
+	
+Version 0.8
+    * Typo in version 0.7 broke automatic update. Fixed.
+	
+Version 0.9
+    * Can now select language for Xinha.
+    * Now use shift-click to strip line feeds from returned text.  Useful for websites that process line feeds.
+    * Enabled Full Page Xinha plugin.
+    * Now use ctrl-shift-x to open Xinha (alt-x disabled).
+    * Xinha nightly build: Trunk (Thu, 19 Jan 2006 14:10:25 +1300)
+
+Version 0.10
+    * Enabled tooltips in bottom bar.
+    * Made bottom bar the default mode (can still be changed in options dialog).
+    * Improved internal file system, may be faster to redisplay Xinha.
+    * Eliminated modifications to Xinha core files (easier updating of Xinha core).
+    * Bottom bar now opens and closes correctly.
+    * Added Client side spell check using SpellBound.  Must have SpellBound installed and Xinha Here Toolbar active.
+    * Now hold shift while opening Xinha Here to treat text as preformatted (all HTML is treated as literal text, line spacing is preserved, and tabs are translated to non-breaking spaces).
+    * Improved about dialog.
+    * Changed restore button image to avoid confusion with undo.
+    * Compatible with Firefox 2.0
+	
+Version 0.11
+	* Xinha 0.92beta: Trunk (Mon, 26 Feb 2007)
+	* Added new languages and skins to options
+	* Skips unsupported or missing plugins in config variable (prevents issues with plugin name changes)
+	
+Version 0.12 (All changes thanks to Hisateru Tanaka)
+	* Fixed bug causing Xinha editor not to load when no plugins were selected
+	* Included Japanese localization for XinhaHere toolbar plugin
+	* Expanded localization of XinhaHere toolbar plugin	
+	* Open/Close file now UTF-8
+	* Extension localized to Japanese
+	* Fixed bug casing flicker/blink in the editor under some circumstances
+	* Xinha editor can now be reduced to smaller width and height
+	
+Version 0.13
+    * Xinha 0.95: Trunk (4 Apr 2008)
+	* Compatible with Firefox 3.0
+	* Now updates from addons.mozilla.org as required by Forefox 3.0
+	* Added "Open Xinha" toolbar button
+	* Set editor to gave focus on startup
+	
+Version 0.14
+	* Fixed bug that prevented localization (thanks to Hisateru Tanaka)
+	* Fixed bug that prevented "Open Xinha" toolbar button from working in FF 3.0.3
+	* Fixed bug "Open Xinha" toolbar button when using small icons
+	
+Version 0.15
+	* Compatible with Firefox 3.5
+	
+Version 0.16
+	* Compatible with Firefox 3.6
+	
+Version 0.17
+	* Fixed error related to toolbar button

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://xinhahere/skin/xinhahere.css"?>
+<!DOCTYPE window SYSTEM "chrome://xinhahere/locale/xinhahere.dtd">
+<window class="dialog"
+	title="&xinhahere.about.title;"
+	orient="vertical"
+	autostretch="always"
+	onload="init()"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script src="about.js" type="application/x-javascript" />
+			
+<tabbox flex="1">
+   <tabs >
+      <tab label="About Xinha Here!"     />
+      <tab label="About Xinha"     />
+      <tab label="Thanks" />
+      <tab label="License" />
+      <tab label="Plugins" />
+   </tabs>
+   <tabpanels flex="1">
+	<box align="top" orient="horizontal">
+		<vbox>
+			<text value="Xinha Here!" class="h1"/>
+			<text value="Version: &xinhahere.version;" class="indent"/>
+			<html:br/>
+			<description>
+				Xinha Here! is a Firefox extension wrapper for the <html:a href="http://xinha.python-hosting.com/" class="link">Xinha HTML editor</html:a>.
+			</description>
+			<html:br/>
+			<text value="&xinhahere.about.createdby;:" class="h2"/>
+			<html:a href="http://blog.hypercubed.com/"><text value="Jayson Harshbarger" class="link indent" /></html:a>
+			<html:br/>
+			<text value="&xinhahere.about.homepage;:" class="h2" />
+			<html:a href="&xinhahere.homepageurl;"><text value="&xinhahere.homepageurl;" class="link indent" /></html:a>
+	  		<html:br/>
+		</vbox>
+		<spring flex="1"/>
+		<image src="chrome://xinhahere/skin/xinhahereb.png"/>
+	</box>       
+	<box align="top" orient="horizontal">
+		<vbox>
+			<text value="Xinha" class="h1"/>
+			<text value="Version: &xinhahere.about.xinharelease;" class="indent"/>
+			<html:br/>
+			<description>
+				Xinha is a free WYSIWYG editor replacement for <html:tt>&lt;textarea&gt;</html:tt> fields.
+				<html:p>Use of Xinha and Xinha Here is granted by the terms of the htmlArea License (based on BSD license)</html:p>
+				<html:p>Xinha was originally based on work by Mihai Bazon which is:</html:p>
+				<html:blockquote>Copyright (c) 2003-2004 dynarch.com.
+					<html:br />Copyright (c) 2002-2003 interactivetools.com, inc.
+					<html:br />This copyright notice MUST stay intact for use.
+				</html:blockquote>
+			</description>
+			<html:br/>
+			<text value="&xinhahere.about.homepage;:" class="h2" />
+			<html:a href="http://xinha.python-hosting.com/"><text value="http://xinha.python-hosting.com/" class="link indent" /></html:a>
+	  		<html:br/>
+		</vbox>
+		<spring flex="1"/>
+		<image src="chrome://xinhahere/content/xinha-core/images/xinha_logo.gif"/>
+	</box>
+	<vbox>
+		<text value="Thanks" class="h1"/>
+  		<description>The development of Xinha would not have been possible without the original work of <html:a href="http://dynarch.com/" class="link">Mihai Bazon</html:a>,
+		<html:a href="http://interactivetools.com" class="link">InteractiveTools.com</html:a>, and the many sponsors and contributors from around the world.
+		</description><separator class="thin"/><description>
+		The development of Xinha Here would not have been possible without the excellent work of <html:a href="http://xinha.python-hosting.com/">the Xinha 
+		developers</html:a>.
+		</description>
+	</vbox>
+	<vbox>
+		<text value="License" class="h1"/>
+		<html:pre>htmlArea License (based on BSD license)
+Copyright (c) 2002-2004, interactivetools.com, inc.
+Copyright (c) 2003-2004 dynarch.com
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1) Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2) Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3) Neither the name of interactivetools.com, inc. nor the names of its
+   contributors may be used to endorse or promote products derived from this
+   software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+		</html:pre>
+	</vbox>
+	<vbox>
+		<text value="Plugins" class="h1"/>
+		<label id="plugins">List of plugins not available at this time</label>
+		<html:br/>
+		<grid>
+			<columns>
+				<column flex="1"/>
+				<column flex="1"/>
+				<column flex="1"/>
+				<column flex="1"/>
+			</columns>
+			<rows id="pluginrows">
+				<row>
+      				<label style="font-weight: bold;" value="Name"></label>
+					<label style="font-weight: bold;" value="Developer"/>
+					<label style="font-weight: bold;" value="Sponsored by"/>
+					<label style="font-weight: bold;" value="License"/>
+    			</row>
+			</rows>
+		</grid>
+	</vbox>
+   </tabpanels>
+</tabbox>
+
+<hbox>
+	<spacer flex="1"/>
+	<button label="&xinhahere.about.close;" oncommand="window.close();"/>
+</hbox>
+
+</window>

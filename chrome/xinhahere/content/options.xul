@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://xinhahere/locale/xinhahere.dtd">
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <prefpane id="xh_options" label="&xinhahere.options.title;">
+    <preferences>
+      <preference id="xinhahereplugin" name="extensions.xinhahere.xinhahereplugin" type="bool"/>
+	  <preference id="openmode" name="extensions.xinhahere.openmode" type="string"/>
+	  <preference id="style" name="extensions.xinhahere.style" type="string"/>
+	  <preference id="lang" name="extensions.xinhahere.lang" type="string"/>
+	  <preference id="plugins" name="extensions.xinhahere.plugins" type="string"/>
+    </preferences>
+	<groupbox style="padding:1em;" flex="1" label="Test">
+		<caption label="&xinhahere.options.title;" />
+		<hbox align="center">
+			<label value="&xinhahere.options.open;: "/>
+			<menulist id="xinhahere.open" preference="openmode">		
+				<menupopup>
+					<menuitem label="&xinhahere.options.last;" value="last"/>
+					<menuitem label="&xinhahere.options.win;" value="win"/>
+					<menuitem label="&xinhahere.options.bot;" value="bot"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<checkbox name="XinhaHerePlugin" id="XinhaHerePlugin" label="&xinhahere.options.xinhahereplugin;" preference="xinhahereplugin" />
+	</groupbox>
+	
+	<groupbox style="padding:1em;" flex="1">
+		<caption label="&xinhahere.options.edopts;" />
+		<hbox>
+			<label value="&xinhahere.options.lang;: " />
+			<menulist id="xinhahere.lang" preference="lang">	
+			<menupopup>
+	          <menuitem value="en" label="English" />
+	          <menuitem value="pt_br" label="Brazilian Portuguese" />
+	          <menuitem value="ch" label="Chinese" />
+	          <menuitem value="gb" label="Chinese GB" />
+	          <menuitem value="cz" label="Czech" />
+	          <menuitem value="da" label="Danish" />
+			  <menuitem value="nl" label="Dutch" />
+	          <menuitem value="ee" label="Estonian" />
+	          <menuitem value="fi" label="Finnish" />
+	          <menuitem value="fr" label="French" />
+	          <menuitem value="de" label="German" />
+			  <menuitem value="el" label="Greek" />
+			  <menuitem value="he" label="Hebrew" />
+	          <menuitem value="hu" label="Hungarian" />
+	          <menuitem value="it" label="Italian" />
+	          <menuitem value="ja" label="Japanese" />
+	          <menuitem value="lv" label="Latvian" />
+	          <menuitem value="no" label="Norwegian" />
+	          <menuitem value="nb" label="Norwegian" />
+			  <menuitem value="fa" label="Persian" />
+	          <menuitem value="pl" label="Polish" />
+	          <menuitem value="ro" label="Romanian" />
+	          <menuitem value="ru" label="Russian" />
+			  <menuitem value="sr" label="Serbian" />
+			  <menuitem value="si" label="Singhalese" />
+			  <menuitem value="sh" label="Serbo-Croatian" />
+	          <menuitem value="es" label="Spanish" />
+			  <menuitem value="sv" label="Swedish" />
+	          <menuitem value="vn" label="Vietnamese" />
+			  <menuitem value="b5" label="b5" />
+			</menupopup>
+			</menulist>
+		</hbox>
+		<hbox align="center">
+			<label value="&xinhahere.options.skins;: "/>
+			<menulist id="xinhahere.style" preference="style">		
+				<menupopup >
+					<menuitem label="none" value=""/>
+					<menuitem label="blue-look" value="blue-look"/>
+					<menuitem label="green-look" value="green-look"/>
+					<menuitem label="xp-blue" value="xp-blue"/>
+					<menuitem label="xp-green" value="xp-green"/>
+					<menuitem label="inditreuse" value="inditreuse"/>
+					<menuitem label="blue-metallic" value="blue-metallic"/>
+					<menuitem label="titan" value="titan"/>
+					<menuitem label="silva" value="silva"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<label value="&xinhahere.options.plugins;: " />
+		<listbox id="plugins_list" onsynctopreference="return xinhahereOptions.getPluginList();" preference="plugins" preference-editable="true" orient="vertical" flex="1" style="overflow: auto; border : thin solid Black;" height="250">
+
+		</listbox>
+	</groupbox>
+
+  </prefpane>
+  
+	<script type="application/x-javascript" src="options.js" />
+
+	<script type="application/x-javascript">
+		this.addEventListener("paneload", xinhahereOptions.initPluginList, false);
+		this.addEventListener("dialogaccept", save, false);
+		
+		function save() {
+			if (!!opener) opener.refreshFlag = true;
+			window.close();
+			return false;
+		};
+		
+	</script> 
+</prefwindow>
