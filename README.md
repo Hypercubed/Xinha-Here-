@@ -24,6 +24,10 @@ Install at [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/x
 - Select Xinha Here from the context menu.
 - Edit the text in the Xinha WYSIWYG HTML editor.
 - Press OK and the valid HTML is pushed back to the original text box.
+ 
+## Demo
+
+[Video demo](http://blog.hypercubed.com/archives/2008/05/18/drag-n-drop-into-xinha-here/)
 
 ## Version History
 
